@@ -1,0 +1,19 @@
+<h1 class="mb-5">Publicaciones</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div *ngFor="let publicacion of publicaciones" class="col">
+    <div class="card h-100">
+      <img [src]="publicacion.imagen" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ publicacion.title }}</h5>
+        <p class="card-text">
+          {{ publicacion.resumen }}
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">
+          {{ publicacion.fecha | date : "medium" }}
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
